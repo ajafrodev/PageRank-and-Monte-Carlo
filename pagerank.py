@@ -19,8 +19,9 @@ def main():
     runs = []
     print('Monte Carlo Simulations:')
     for i in [5, 10, 50, 100]:
-        runs.append(monte_carlo(i, i, adj, size))
-        print(np.matrix(monte_carlo(i, i, adj, size)).T)
+        r = monte_carlo(i, i, adj, size)
+        runs.append(r)
+        print(np.matrix(r).T)
     print()
     measure = []
     for i in range(4):
